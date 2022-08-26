@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6rem;
+  /* border: 1px solid yellow; */
+  flex-wrap: wrap;
+  background-color: #caddce;
+}
+.header {
+  display: flex;
+  width: 60%;
+  font-size: 18px;
+  font-weight: 600;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.header div {
+  /* border: 1px solid red; */
+  width: 300px;
+}
+.header p{
+    font-weight: 400;
+}
+main {
+  /* border: 1px solid red; */
+  display: flex;
+  /* height: 60vh; */
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+}
+main .box {
+  /* border: 1px solid black; */
+  width: 330px;
+  height: 400px;
+}
+.box .box1 {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: row;
+}
+.box:nth-child(3n + 2) .box1 {
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.box1 img {
+  width: 150px;
+  box-shadow: 5px 10px 8px 10px #888888;
+  border-radius: 10px;
+  transform: translate(80px);
+}
+.box .box1 .name {
+  transform: rotate(90deg) translateX(-20px) translateY(-10px);
+  display: inline-block;
+  width: 100%;
+}
+.box .job {
+  transform: translate(80px);
+  display: inline-block;
+}
+.box:nth-child(3n + 2) .job {
+  transform: translateX(80px) translateY(-50px);
+  display: inline-block;
+}
+.box:nth-child(2n + 4) .job {
+    transform: translateX(80px) ;
+    display: inline-block;
+  }
+
+.box:hover {
+  transform: scale(1.4);
+  transition: 1s;
+  
+}
+.box:hover img{
+    box-shadow: 5px 10px 8px 10px #ad6969;
+}
+
+@media (max-width: 1122px) {
+  .box:nth-child(2n + 4) .box1 {
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box:nth-child(2n + 5) .box1 {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+  }
+  .box:nth-child(2n + 4) .job {
+    transform: translateX(80px) translateY(-55px);
+    display: inline-block;
+  }
+  .box:nth-child(2n + 5) .job {
+    transform: translateX(80px);
+    display: inline-block;
+  }
+}
+@media (max-width: 792px) {
+  .box .box1:nth-child(n+1) {
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box .job:nth-child(n+1) {
+    transform: translateX(80px) translateY(-55px);
+    display: inline-block;
+  }
+}
