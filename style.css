@@ -154,6 +154,11 @@ main .box {
 }
   .box .box1 .name {
     
+    transform:rotate(90deg) translateX(-30px) translateY(10px);
+    transition: 1s;
+  }
+  .box:hover .box1 .name {
+    
     transform: translateY(-130px) translateX(-100px);
     transition: 1s;
   }
