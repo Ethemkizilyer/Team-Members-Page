@@ -40,11 +40,14 @@ main {
   width: 100%;
   margin: auto;
   justify-content: center;
+  align-items: center;
 }
 main .box {
   /* border: 1px solid black; */
   width: 330px;
   height: 400px;
+  /* align-items: center;*/ 
+  text-align:start; 
 }
 .box .box1 {
   /* border: 2px solid red; */
@@ -126,4 +129,35 @@ main .box {
     transform: translateX(80px) translateY(-55px);
     display: inline-block;
   }
+
+  
+}
+@media (max-width: 500px){
+.box .box1:nth-child(n+1) {
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box .job:nth-child(n+1) {
+    transform: translateX(80px) translateY(-55px);
+    display: inline-block;
+  }
+
+
+  .box1 .image{
+    margin-right: 3rem;
+  }
+  .box .box1 .name span{
+  width:8rem;
+  display: inline-block;
+}
+  .box .box1 .name {
+    
+    transform: translateY(-130px) translateX(-100px);
+    transition: 1s;
+  }
+  body{
+    gap:4rem
+  };
 }
